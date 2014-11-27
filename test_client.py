@@ -7,9 +7,9 @@ from app import ws_publisher
 def main():
     redis_client = tornadoredis.Client()
     redis_client.connect()
-    publisher = ws_publisher('kitchen', redis_client)
-    publisher.next()
-    publisher.send('hello')
+    kitchen = ws_publisher('kitchen', redis_client)
+    kitchen.next()
+    kitchen.send('kitchen')
 
 
 if __name__ == '__main__':

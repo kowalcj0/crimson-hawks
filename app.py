@@ -20,7 +20,7 @@ class WebSocket(tornado.websocket.WebSocketHandler):
     def open(self):
         print 'WebSocket opened'
 
-    @tornado.gen.engine
+    @tornado.gen.coroutine
     def listen(self):
         self.client = tornadoredis.Client()
         self.client.connect()
@@ -43,6 +43,14 @@ class WebSocket(tornado.websocket.WebSocketHandler):
             self.client.disconnect()
 
 
+class StaticFileHandler(tornado.web.StaticFileHandler):
+    def set_extra_headers(self, path):
+        # Disable cache
+        self.set_header(
+            'Cache-Control',
+            'no-store, no-cache, must-revalidate, max-age=0')
+
+
 def ws_publisher(channel, client):
     while True:
         try:
@@ -58,7 +66,7 @@ def make_application():
         (r'/', tornado.web.RedirectHandler, {'url': '/index.html'}),
         (r"/kitchen", WebSocket, {'channel': 'kitchen'}),
         (r"/tweets", WebSocket, {'channel': 'tweets'}),
-        (r"/(.*)", tornado.web.StaticFileHandler, {'path': static_dir}),
+        (r"/(.*)", StaticFileHandler, {'path': static_dir}),
     ]
     application = tornado.web.Application(handlers)
     return application
