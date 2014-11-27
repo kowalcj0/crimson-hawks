@@ -1,0 +1,102 @@
+<html>
+<link rel="stylesheet"
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script type="text/javascript" src="js/hotdesks.js"></script>
+  <style>
+  .ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+  }
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+  </style>
+<body>
+
+<div id="hotdesks">
+
+    <div id="HDA1">HDA1</div>
+    <div id="HDA2">HDA2</div>
+    <div id="HDA3">HDA3</div>
+    <div id="HDA4">HDA4</div>
+    <div id="HDB1">HDB1</div>
+    <div id="HDB2">HDB2</div>
+    <div id="HDB3">HDB3</div>
+    <div id="HDB4">HDB4</div>
+    <div id="HDC1">HDC1</div>
+    <div id="HDC2">HDC2</div>
+    <div id="HDC3">HDC3</div>
+    <div id="HDC4">HDC4</div>
+    <div id="HDD1">HDD1</div>
+    <div id="HDD2">HDD2</div>
+    <div id="HDD3">HDD3</div>
+    <div id="HDD4">HDD4</div>
+    <div id="HDE1">HDE1</div>
+    <div id="HDE2">HDE2</div>
+    <div id="HDE3">HDE3</div>
+    <div id="HDE4">HDE4</div>
+    <div id="HDF1">HDF1</div>
+    <div id="HDF2">HDF2</div>
+    <div id="HDF3">HDF3</div>
+    <div id="HDF4">HDF4</div>
+    <div id="HDG1">HDG1</div>
+    <div id="HDG2">HDG2</div>
+    <div id="HDG3">HDG3</div>
+    <div id="HDG4">HDG4</div>
+    <div id="HDH1">HDH1</div>
+    <div id="HDH2">HDH2</div>
+    <div id="HDH3">HDH3</div>
+    <div id="HDH4">HDH4</div>
+
+</div>
+<script>
+$(document).ready(function(){
+  $("div[id*='HD']").click(function(){
+    $(this).hide();
+  });
+  //$("#HDA4").hover(function(){ $(this).text("asdas"); });
+  //$("#HDA4").tooltip();
+});
+</script>
+</body>
+</html>
