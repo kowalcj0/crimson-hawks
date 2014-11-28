@@ -128,37 +128,30 @@ var getDeskDetails = function(desks, deskId) {
 !function ($) {
   $(function(){
 
-    $("div[id*='HD']").tooltip({
-        items: "[id]",
-        content: function() {
-            var element = $( this );
-            return getDeskDetails(hotdesks, element.context.id);
-        },
-        show: "slideDown", // show immediately
-        open: function(event, ui)
-        {
-            ui.tooltip.hover(
-                    function () {
-                        $(this).fadeTo("slow", 0.5);
-                    });
-        }
+    $("div[id*='HD']").click(function() {
+        $(this).tooltip({
+            items: "[id]",
+            content: function() {
+                var element = $( this );
+                return getDeskDetails(hotdesks, element.context.id);
+            },
+            //show: "slideDown", // show immediately
+            show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+        });
+        $(this).tooltip("open");
     });
 
-    $("div[id*='ED']").tooltip({
-        items: "[id]",
-        content: function() {
-            var element = $( this );
-            return getDeskDetails(empdesks, element.context.id);
-        },
-        //show: "slideDown", // show immediately
-        show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
-        open: function(event, ui)
-        {
-            ui.tooltip.hover(
-                    function () {
-                        $(this).fadeTo(300, 0.9);
-                    });
-        }
+    $("div[id*='ED']").click(function() {
+        $(this).tooltip({
+            items: "[id]",
+            content: function() {
+                var element = $( this );
+                return getDeskDetails(empdesks, element.context.id);
+            },
+            //show: "slideDown", // show immediately
+            show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+        });
+        $(this).tooltip("open");
     });
   });
 }(window.jQuery);
