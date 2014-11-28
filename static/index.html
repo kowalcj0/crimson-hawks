@@ -86,27 +86,36 @@
 	<div id="dcc-modules-section">
 	    <div id="dcc-container">
 		    <div id="dcc-selection">
-				Hello world<div id="EVENTSPACES">
-    <div id="EVSP01">EVSP01</div>
-    <div id="EVSP02">EVSP02</div>
-</div>
-        <label id="foodLabel"></label>
-        <div id="cookieMonster" class="hide">
-          <img class="img-responsive" src="/media/cookie.gif">
-        </div>
+			    <div id="column-top-1">
+					<div class="title">Floor 9: Real Time Events<br><hr></div>
+					 <div id="EVENTSPACES"> 
+                        <div id="EVSP01"></div>
+                        <div id="EVSP02"></div>
+                    </div>
+			    </div>
+				<div id="column-top-2">
+					<div class="title">Floor 9: The Kitchen<br><hr></div>
+					 <div id="food">
+						 <div id="nofood"><img src="no-food.png"><p>Sorry, there is no food at the kitchen...</p></div>
+						 
+					</div>
+			    </div>
 		    </div>
 	    </div> <!-- /container -->
 	</div>
 	<div id="dcc-updates">
-		Our centre has been visited <stong>1800</stong> times!
+		<div>
+			The centre has been visited <strong>1464</strong> times!
+		</div>
 	</div>
 	<div id="dcc-map-section">
 	    <div id="dcc-container">
 		    <div id="dcc-selection">
 			    <div id="column1">
-				    <div id="title-map">
-					    Desk finder
+				    <div class="title">
+					    Floor 8: Desk Finder
 				    </div>
+				    <hr>
 					<div id="floor8">
 						<div id="EDA1" class="desk employee-desk"></div>
 						<div id="EDA2" class="desk employee-desk"></div>
@@ -149,6 +158,38 @@
 						<div id="EDA38" class="desk employee-desk2"></div>
 						<div id="EDA39" class="desk employee-desk2"></div>
 						<div id="EDA40" class="desk employee-desk2"></div>
+						<div id="HDA1" class="desk hot-desk"></div>
+						<div id="HDA2" class="desk hot-desk"></div>
+						<div id="HDA3" class="desk hot-desk"></div>
+						<div id="HDA4" class="desk hot-desk"></div>
+						<div id="HDB1" class="desk hot-desk"></div>
+						<div id="HDB2" class="desk hot-desk"></div>
+						<div id="HDB3" class="desk hot-desk"></div>
+						<div id="HDB4" class="desk hot-desk"></div>
+						<div id="HDC1" class="desk hot-desk"></div>
+						<div id="HDC2" class="desk hot-desk"></div>
+						<div id="HDC3" class="desk hot-desk"></div>
+						<div id="HDC4" class="desk hot-desk"></div>
+						<div id="HDD1" class="desk hot-desk"></div>
+						<div id="HDD2" class="desk hot-desk"></div>
+						<div id="HDD3" class="desk hot-desk"></div>
+						<div id="HDD4" class="desk hot-desk"></div>
+						<div id="HDE1" class="desk hot-desk"></div>
+						<div id="HDE2" class="desk hot-desk"></div>
+						<div id="HDE3" class="desk hot-desk"></div>
+						<div id="HDE4" class="desk hot-desk"></div>
+						<div id="HDF1" class="desk hot-desk"></div>
+						<div id="HDF2" class="desk hot-desk"></div>
+						<div id="HDF3" class="desk hot-desk"></div>
+						<div id="HDF4" class="desk hot-desk"></div>
+						<div id="HDG1" class="desk hot-desk"></div>
+						<div id="HDG2" class="desk hot-desk"></div>
+						<div id="HDG3" class="desk hot-desk"></div>
+						<div id="HDG4" class="desk hot-desk"></div>
+						<div id="HDH1" class="desk hot-desk"></div>
+						<div id="HDH2" class="desk hot-desk"></div>
+						<div id="HDH3" class="desk hot-desk"></div>
+						<div id="HDH4" class="desk hot-desk"></div>
 					</div>
 			    </div>
 				<div id="column2">
@@ -164,37 +205,34 @@
 			<div id="dcc-catapult"><img src="dcc-catapult.gif"></div>
 		</div>
 	</div> 
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="vendor/reconnecting-websocket.js"></script>
-    <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
-	<!--<script type="text/javascript">-->
+	<script type="text/javascript">
 	
-			<!--$(function () {-->
-					<!--PageAUPBehaviour();-->
-			<!--});-->
+	    $(function () {
+	        PageAUPBehaviour();
+	    });
 	
-			<!--function enableScroll() {-->
-					<!--$('#policy-text').mCustomScrollbar({-->
-							<!--scrollInertia: 500,-->
-							<!--theme: 'layout-1',-->
-							<!--autoDraggerLength: false,-->
-							<!--advanced: {-->
-									<!--updateOnContentResize: true,-->
-									<!--updateOnBrowserResize: true-->
-							<!--}-->
-					<!--});-->
-			<!--}-->
+	    function enableScroll() {
+	        $('#policy-text').mCustomScrollbar({
+	            scrollInertia: 500,
+	            theme: 'layout-1',
+	            autoDraggerLength: false,
+	            advanced: {
+	                updateOnContentResize: true,
+	                updateOnBrowserResize: true
+	            }
+	        });
+	    }
 	
-			<!--function destroyScroll() {-->
-					<!--$("#policy-text").mCustomScrollbar("destroy");-->
-			<!--}-->
+	    function destroyScroll() {
+	        $("#policy-text").mCustomScrollbar("destroy");
+	    }
 	
-			<!--function updateScroll() {-->
-					<!--destroyScroll();-->
-					<!--enableScroll();-->
-			<!--}-->
+	    function updateScroll() {
+	        destroyScroll();
+	        enableScroll();
+	    }
 	
-	<!--</script>-->
+	</script>
+
   </body>
 </html>
