@@ -10,9 +10,9 @@
 
   toggleFoodLabel = function() {
     if (isFoodAvail) {
-      var text = 'This is food in the kitchen. Hurry up!';
+      var text = 'There is food. Hurry up!';
     } else {
-      var text = 'Food is finished in the kitchen. Got to be quick next time!';
+      var text = 'Food is finished. Got to be quick next time!';
     }
     $('label#foodLabel').text(text);
   };
