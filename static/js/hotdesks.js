@@ -163,16 +163,18 @@ var dates = {
 var getCurrentEvents = function() {
    // will return random current events
    var result = [];
-   var randSpan = function() { return Math.floor(Math.random() * 3) + 1; }
+   var randSpan = function() { return Math.floor(Math.random() * 6) + 1; }
    var randSign = function() { return Math.random() < 0.5 ? "-" : "+"; }
    for (ev in eventspaces) {
         var now = new Date();
         var start =  new Date(eval("now.getTime() "+randSign()+" randSpan()*3600000;"));
         var end =  new Date(eval("now.getTime() "+randSign()+" randSpan()*3600000;"));
-        console.log(now + " - " + start + " - " + end + " - " + eventspaces[ev][1]);
         if (dates.inRange(now, start, end)) {
-            console.log("in range");
-            result.push(eventspaces[ev]);
+            console.log("in range: " + now + " - " + start + " - " + end + " - " + eventspaces[ev][1]);
+            var newEvent = eventspaces[ev];
+            newEvent[4] = "<a style='color: pink' href='"+eventspaces[ev][4]+"'>Click here</a>";
+            newEvent[5] = eventspaces[ev][5].replace("|", "<br/>");
+            result.push(newEvent);
         }
    }
    console.log(result);
@@ -197,7 +199,7 @@ var getDetails = function(elements, elementId) {
 
    var HDcols = ["Desk","Name","Organistation","Email","Phone","Time in","Time Out"];
    var EDcols = ["Desk","Name","Role","Email","Phone"];
-   var EVcols = ["Event Space","Name","Start","Finish","Link","Speakers"]
+   var EVcols = ["Event Space","Name","Start","Finish","Details","Speakers"]
 
    var output = "<table id='deskDetails' class='deskDetails'>";
    var cellTemplate = "<tr id='{0}Cell' class='tooltipCell'>"+
@@ -248,8 +250,7 @@ var getDetails = function(elements, elementId) {
                 var element = $( this );
                 return getDetails("currentEvents", element.context.id);
             },
-            //show: "slideDown", // show immediately
-            show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+            show: { effect: function() { $(this).fadeTo(3000, 0.9);}, length:0},
         });
         $(this).tooltip("open");
     });
@@ -261,7 +262,6 @@ var getDetails = function(elements, elementId) {
                 var element = $( this );
                 return getDetails("hotdesks", element.context.id);
             },
-            //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
         });
         $(this).tooltip("open");
@@ -274,7 +274,6 @@ var getDetails = function(elements, elementId) {
                 var element = $( this );
                 return getDetails("empdesks", element.context.id);
             },
-            //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
         });
         $(this).tooltip("open");
