@@ -26,49 +26,49 @@ var hotdesks = [
 
 
 var empdesks = [
-["ED01","Alex Vail","Events Manager","alex.vail@cde.catapult.org.uk",""],
-["ED02","Allyssa Gregory","HR Manager","allyssa.gregory@cde.catapult.org.uk",""],
-["ED03","Avril Grieves","","avril.grieves@cde.catapult.org.uk",""],
-["ED04","Azita Esmaili","Chief Development Officer","azita@cde.catapult.org.uk",""],
-["ED05","Carly Glowotz","HR Specialist","carly.glowotz@cde.catapult.org.uk","07964572424"],
-["ED06","Casey Richardson","","casey.richardson@cde.catapult.org.uk",""],
-["ED07","Chirdeep Chhabra","","chirdeep.chhabra@cde.catapult.org.uk","+44 7972770116"],
-["ED08","Chris Thompson","Partnerships Director","chris.thompson@cde.catapult.org.uk","07904832928"],
-["ED09","Claire Mackay","Office Manager","claire.mackay@cde.catapult.org.uk","0775 1191 807"],
-["ED10","Clare Brooke","","clare.brooke@cde.catapult.org.uk",""],
-["ED11","Daniel Casadei","","Dan.Casadei@cde.catapult.org.uk",""],
-["ED12","Daniel Dearing","Partnerships Manager","daniel.dearing@cde.catapult.org.uk","07970227860"],
-["ED13","David Sparks","Operations Manager","david.sparks@cde.catapult.org.uk",""],
-["ED14","Dennis Temper","","dennis.temper@cde.catapult.org.uk",""],
-["ED15","Finance Finance","","finance@cde.catapult.org.uk",""],
-["ED16","Gerrod Taylor","","gerrod.taylor@cde.catapult.org.uk",""],
-["ED17","hamid falaki","Connected Digital Economy Catapult","hamid.falaki@cde.catapult.org.uk",""],
-["ED18","Irene Lopez de Vallejo","","Irene.lopezdevallejo@cde.catapult.org.uk",""],
-["ED19","jenni young","","jenni.young@cde.catapult.org.uk",""],
-["ED20","Lee Tarrant","Head of Test and Engineering","","lee.tarrant@cde.catapult.org.uk","0203 574 4894"],
-["ED21","Maame-Yaa Bempah","Financial Controller","mbempah@cde.catapult.org.uk","07964 140 565"],
-["ED22","Marko Balabanovic","Innovation Director","marko.balabanovic@cde.catapult.org.uk",""],
-["ED23","Matt Leipnik","Information Systems Manager","matt.leipnik@cde.catapult.org.uk","07949935777"],
-["ED24","Matt Ward","","matt.ward@cde.catapult.org.uk",""],
-["ED25","Maurizio Pilu","","maurizio.pilu@cde.catpult.org.uk",""],
-["ED26","Michella Oswald","Events Manager","michella.oswald@cde.catapult.org.uk","077712545115"],
-["ED27","Miles Davenport","","miles.davenport@cde.catapult.org.uk",""],
-["ED28","Neil Crockett","","neil.crockett@cde.catapult.org.uk",""],
-["ED29","Nithin Raj","Programme Manager","nithin.raj@cde.catapult.org.uk",""],
-["ED30","Noeline Sanders","Chief Business Officer","noeline.sanders@cde.catapult.org.uk","07786 916826"],
-["ED31","Pat McAlinden","EA to CEO","pat.mcalinden@cde.catapult.org.uk","07964324029"],
-["ED32","Paul Galwas","","paul.galwas@cde.catapult.org.uk","442035744832"],
-["ED33","Richard French","","richard.french@cde.catapult.org.uk",""],
-["ED34","Sade Laja","Head of digital engagement and content","sade.laja@cde.catapult.org.uk","+44 (0) 203 574 4707"],
-["ED35","Steven Wood","Senior Partnerships Manager","steven.wood@cde.catapult.org.uk","07972871092"],
-["ED36","Temitope Adejumo","Accounts Assistant","temitope.adejumo@cde.catapult.org.uk","07946889261"]
+["EDA1","Alex Vail","Events Manager","alex.vail@cde.catapult.org.uk",""],
+["EDA2","Allyssa Gregory","HR Manager","allyssa.gregory@cde.catapult.org.uk",""],
+["EDA3","Avril Grieves","","avril.grieves@cde.catapult.org.uk",""],
+["EDA4","Azita Esmaili","Chief Development Officer","azita@cde.catapult.org.uk",""],
+["EDA5","Carly Glowotz","HR Specialist","carly.glowotz@cde.catapult.org.uk","07964572424"],
+["EDA6","Casey Richardson","","casey.richardson@cde.catapult.org.uk",""],
+["EDA7","Chirdeep Chhabra","","chirdeep.chhabra@cde.catapult.org.uk","+44 7972770116"],
+["EDA8","Chris Thompson","Partnerships Director","chris.thompson@cde.catapult.org.uk","07904832928"],
+["EDA9","Claire Mackay","Office Manager","claire.mackay@cde.catapult.org.uk","0775 1191 807"],
+["EDA10","Clare Brooke","","clare.brooke@cde.catapult.org.uk",""],
+["EDA11","Daniel Casadei","","Dan.Casadei@cde.catapult.org.uk",""],
+["EDA12","Daniel Dearing","Partnerships Manager","daniel.dearing@cde.catapult.org.uk","07970227860"],
+["EDA13","David Sparks","Operations Manager","david.sparks@cde.catapult.org.uk",""],
+["EDA14","Dennis Temper","","dennis.temper@cde.catapult.org.uk",""],
+["EDA15","Finance Finance","","finance@cde.catapult.org.uk",""],
+["EDA16","Gerrod Taylor","","gerrod.taylor@cde.catapult.org.uk",""],
+["EDA17","hamid falaki","Connected Digital Economy Catapult","hamid.falaki@cde.catapult.org.uk",""],
+["EDA18","Irene Lopez de Vallejo","","Irene.lopezdevallejo@cde.catapult.org.uk",""],
+["EDA19","jenni young","","jenni.young@cde.catapult.org.uk",""],
+["EDA20","Lee Tarrant","Head of Test and Engineering","","lee.tarrant@cde.catapult.org.uk","0203 574 4894"],
+["EDA21","Maame-Yaa Bempah","Financial Controller","mbempah@cde.catapult.org.uk","07964 140 565"],
+["EDA22","Marko Balabanovic","Innovation Director","marko.balabanovic@cde.catapult.org.uk",""],
+["EDA23","Matt Leipnik","Information Systems Manager","matt.leipnik@cde.catapult.org.uk","07949935777"],
+["EDA24","Matt Ward","","matt.ward@cde.catapult.org.uk",""],
+["EDA25","Maurizio Pilu","","maurizio.pilu@cde.catpult.org.uk",""],
+["EDA26","Michella Oswald","Events Manager","michella.oswald@cde.catapult.org.uk","077712545115"],
+["EDA27","Miles Davenport","","miles.davenport@cde.catapult.org.uk",""],
+["EDA28","Neil Crockett","","neil.crockett@cde.catapult.org.uk",""],
+["EDA29","Nithin Raj","Programme Manager","nithin.raj@cde.catapult.org.uk",""],
+["EDA30","Noeline Sanders","Chief Business Officer","noeline.sanders@cde.catapult.org.uk","07786 916826"],
+["EDA31","Pat McAlinden","EA to CEO","pat.mcalinden@cde.catapult.org.uk","07964324029"],
+["EDA32","Paul Galwas","","paul.galwas@cde.catapult.org.uk","442035744832"],
+["EDA33","Richard French","","richard.french@cde.catapult.org.uk",""],
+["EDA34","Sade Laja","Head of digital engagement and content","sade.laja@cde.catapult.org.uk","+44 (0) 203 574 4707"],
+["EDA35","Steven Wood","Senior Partnerships Manager","steven.wood@cde.catapult.org.uk","07972871092"],
+["EDA36","Temitope Adejumo","Accounts Assistant","temitope.adejumo@cde.catapult.org.uk","07946889261"]
 ]
 
 
 var eventspaces = [
-["EVSP01","Fostering IoT entreeurship workshop","28/11/2014 09:00","28/11/2014 14:00","http://www.digitalcatapultcentre.org.uk/event/fostering-iot-entrepreneurship/",""],
-["EVSP02","Digital TV Group Global TV Innovation Detonator","01/12/2014 09:00","01/12/2014 12:30","http://www.digitalcatapultcentre.org.uk/event/dtg-global-tv-innovation-detonator/",""],
-["EVSP03","Catapult Programme SME Event","02/12/2014 17:00","02/12/2014 21:30","http://www.digitalcatapultcentre.org.uk/event/cross-catapult-sme-event/",""],
+["EVSP01","Fostering IoT entreeurship workshop","28/11/2014 09:00","28/11/2014 18:00","http://www.digitalcatapultcentre.org.uk/event/fostering-iot-entrepreneurship/",""],
+["EVSP02","Digital TV Group Global TV Innovation Detonator","01/11/2014 09:00","01/12/2014 12:30","http://www.digitalcatapultcentre.org.uk/event/dtg-global-tv-innovation-detonator/",""],
+["EVSP03","Catapult Programme SME Event","02/11/2014 17:00","02/12/2014 21:30","http://www.digitalcatapultcentre.org.uk/event/cross-catapult-sme-event/",""],
 ["EVSP04","101 Digital Breakfast: A new blueprint for Copyright Licensing","03/12/2014 09:00","03/12/2014 10:30","http://www.digitalcatapultcentre.org.uk/event/101-digital-breakfast-future-of-copyright-licensing/","Dr. Dinusha Mendis, Bournemouth University|Dr. Davide Secchi, Bournemouth University"],
 ["EVSP05","Copyright Sandpit: Interactive SME  workshop","03/12/2014 11:00","03/12/2014 14:00","http://www.digitalcatapultcentre.org.uk/event/understanding-uk-copyright-law-an-interactive-workshop-for-photographers-and-illustrators/ ","Prof. Ronan Deazley, Professor of Copyright Law - University of Glasgow. Editor, Copyright User Portal|Bartolomeo Meletti, Lead Producer - Copyright User Portal|Dr. Dinusha Mendis, Co Director of CIPPM - Bournemouth University. Lead Academic, Copyright User Portal|Dominic Young, CEO - The Copyright Hub"],
 ["EVSP06","IBM Hackathon","03/12/2014 10:00","04/12/2014 00:00","http://www.digitalcatapultcentre.org.uk/event/digital-health-hack-day/ ",""],
@@ -77,7 +77,7 @@ var eventspaces = [
 ["EVSP07","Gaming Intelligence Through Data","08/12/2014 09:00","08/12/2014 16:00","http://www.digitalcatapultcentre.org.uk/event/gaming-intelligence-through-data/ ","Nicholas Lovell, Director - GAMESbrief"],
 ["EVSP10","D5 Summit","10/12/2014 09:00","10/12/2014 14:00","",""],
 ["EVSP07","Digital Health Pitstop","08/12/2014 09:00","12/12/2014 17:30","http://www.digitalcatapultcentre.org.uk/event/healthpitstop/ ",""],
-["EVSP02","Catch Me If You Can: Business Opportunities in Cyber Security","15/12/2014 09:00","15/12/2014 13:00","http://www.digitalcatapultcentre.org.uk/event/catch-me-if-you-can-business-opportunities-in-cyber-security/ ","Sam Keayes, VP Consulting & Cyber Security Services (CIC) - Quintec a Thales Business|Rob Price, Head of Digital UK&I - Atos Consulting|Mark Brown, Executive Director Cyber Security & Resilience - EY"],
+["EVSP02","Catch Me If You Can: Business Opportunities in Cyber Security","2014/11/15 09:00","2014/11/31 13:00","http://www.digitalcatapultcentre.org.uk/event/catch-me-if-you-can-business-opportunities-in-cyber-security/ ","Sam Keayes, VP Consulting & Cyber Security Services (CIC) - Quintec a Thales Business|Rob Price, Head of Digital UK&I - Atos Consulting|Mark Brown, Executive Director Cyber Security & Resilience - EY"],
 ["EVSP10","Data is the New Money: Opportunities in Big Data, Now and in the Future","15/12/2014 13:00","15/12/2014 17:00","http://www.digitalcatapultcentre.org.uk/event/data-is-the-new-money-opportunities-in-big-data-now-and-in-the-future/ ","Carlo Gagliardi, Partner & Co-Lead - Digital Practice|Shahbaz Haque, Director - Hitachi Consulting|John Levell, Associate Partner and UK&I Head of Digital - EY"],
 ["EVSP03","Reinventing the High Street","16/12/2014 09:30","16/12/2014 17:30","http://www.digitalcatapultcentre.org.uk/event/reinventing-the-high-street-conference/ ","Ben Brown, Founder - Shopwave|Jonathan Duffy, Managing Director - beacontent|Michelle Lowe FAcSS, University of Southampton"],
 ["EVSP05","UK Digital Summit for Policy & Business","17/12/2014 09:00","17/12/2014 17:00","http://www.digitalcatapultcentre.org.uk/event/uk-digital-summit/ ","Mary Kyriakidi, VP Insight for Branded Services and Content – BBC Worldwide|Paul Spence, Director of Strategy and Corporate Affairs – EDF Energy|Paul Gainham, Senior Director of Vertical Marketing EMEA – Juniper Networks|"],
@@ -85,6 +85,7 @@ var eventspaces = [
 ["EVSP09","When Data Becomes Knowledge: Catapult Staff Conference","18/12/2014 11:00","18/12/2014 16:00","",""],
 ["EVSP02","101 Launch Season Closing Party","18/12/2014 18:00","18/12/2014 22:00","",""]
 ]
+
 
 String.format = function() {
     // The string containing the format items (e.g. "{0}")
@@ -105,6 +106,80 @@ String.capitalize = function() {
     return this.toLowerCase().charAt(0).toUpperCase() + this.slice(1);
 }
 
+// Source: http://stackoverflow.com/questions/497790
+var dates = {
+    convert:function(d) {
+        // Converts the date in d to a date-object. The input can be:
+        //   a date object: returned without modification
+        //  an array      : Interpreted as [year,month,day]. NOTE: month is 0-11.
+        //   a number     : Interpreted as number of milliseconds
+        //                  since 1 Jan 1970 (a timestamp) 
+        //   a string     : Any format supported by the javascript engine, like
+        //                  "YYYY/MM/DD", "MM/DD/YYYY", "Jan 31 2009" etc.
+        //  an object     : Interpreted as an object with year, month and date
+        //                  attributes.  **NOTE** month is 0-11.
+        return (
+            d.constructor === Date ? d :
+            d.constructor === Array ? new Date(d[0],d[1],d[2]) :
+            d.constructor === Number ? new Date(d) :
+            d.constructor === String ? new Date(d) :
+            typeof d === "object" ? new Date(d.year,d.month,d.date) :
+            NaN
+        );
+    },
+    compare:function(a,b) {
+        // Compare two dates (could be of any type supported by the convert
+        // function above) and returns:
+        //  -1 : if a < b
+        //   0 : if a = b
+        //   1 : if a > b
+        // NaN : if a or b is an illegal date
+        // NOTE: The code inside isFinite does an assignment (=).
+        return (
+            isFinite(a=this.convert(a).valueOf()) &&
+            isFinite(b=this.convert(b).valueOf()) ?
+            (a>b)-(a<b) :
+            NaN
+        );
+    },
+    inRange:function(d,start,end) {
+        // Checks if date in d is between dates in start and end.
+        // Returns a boolean or NaN:
+        //    true  : if d is between start and end (inclusive)
+        //    false : if d is before start or after end
+        //    NaN   : if one or more of the dates is illegal.
+        // NOTE: The code inside isFinite does an assignment (=).
+       return (
+            isFinite(d=this.convert(d).valueOf()) &&
+            isFinite(start=this.convert(start).valueOf()) &&
+            isFinite(end=this.convert(end).valueOf()) ?
+            start <= d && d <= end :
+            NaN
+        );
+    }
+}
+
+
+var getCurrentEvents = function() {
+   // will return random current events
+   var result = [];
+   var randSpan = function() { return Math.floor(Math.random() * 3) + 1; }
+   var randSign = function() { return Math.random() < 0.5 ? "-" : "+"; }
+   for (ev in eventspaces) {
+        var now = new Date();
+        var start =  new Date(eval("now.getTime() "+randSign()+" randSpan()*3600000;"));
+        var end =  new Date(eval("now.getTime() "+randSign()+" randSpan()*3600000;"));
+        console.log(now + " - " + start + " - " + end + " - " + eventspaces[ev][1]);
+        if (dates.inRange(now, start, end)) {
+            console.log("in range");
+            result.push(eventspaces[ev]);
+        }
+   }
+   console.log(result);
+   return result;
+}
+
+var currentEvents = getCurrentEvents();
 
 var getElementData = function(elements, elementId) {
     var result = ["N/A","N/A","N/A","N/A","N/A","N/A","N/A"];
@@ -136,7 +211,7 @@ var getDetails = function(elements, elementId) {
            cols = EDcols;
            console.log("EDCols");
            break;
-       case "eventspaces":
+       case "currentEvents":
            cols = EVcols;
            console.log("EVCols");
            break;
@@ -145,6 +220,7 @@ var getDetails = function(elements, elementId) {
            console.log("HDCols");
            break;
    }
+
 
    for (col in cols) {
         c = String.format(cellTemplate,
@@ -160,15 +236,17 @@ var getDetails = function(elements, elementId) {
 }
 
 
+
 !function ($) {
   $(function(){
+
 
     $("div[id*='EVSP']").click(function() {
         $(this).tooltip({
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDetails("eventspaces", element.context.id);
+                return getDetails("currentEvents", element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
