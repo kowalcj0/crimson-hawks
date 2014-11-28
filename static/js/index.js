@@ -36,7 +36,7 @@
   };
 
   $(document).ready(function() {
-    $.material.init();
+    //$.material.init();
     init(updateKitchenWidget);
     subscribe(updateKitchenWidget);
   });

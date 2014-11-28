@@ -33,6 +33,10 @@
 	    <div id="dcc-container">
 		    <div id="dcc-selection">
 				Hello world
+        <label id="foodLabel"></label>
+        <div id="cookieMonster" class="hide">
+          <img class="img-responsive" src="/media/cookie.gif">
+        </div>
 		    </div>
 	    </div> <!-- /container -->
 	</div>
@@ -103,34 +107,37 @@
 			<div id="dcc-catapult"><img src="dcc-catapult.gif"></div>
 		</div>
 	</div> 
-	<script type="text/javascript">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="vendor/reconnecting-websocket.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+	<!--<script type="text/javascript">-->
 	
-	    $(function () {
-	        PageAUPBehaviour();
-	    });
+			<!--$(function () {-->
+					<!--PageAUPBehaviour();-->
+			<!--});-->
 	
-	    function enableScroll() {
-	        $('#policy-text').mCustomScrollbar({
-	            scrollInertia: 500,
-	            theme: 'layout-1',
-	            autoDraggerLength: false,
-	            advanced: {
-	                updateOnContentResize: true,
-	                updateOnBrowserResize: true
-	            }
-	        });
-	    }
+			<!--function enableScroll() {-->
+					<!--$('#policy-text').mCustomScrollbar({-->
+							<!--scrollInertia: 500,-->
+							<!--theme: 'layout-1',-->
+							<!--autoDraggerLength: false,-->
+							<!--advanced: {-->
+									<!--updateOnContentResize: true,-->
+									<!--updateOnBrowserResize: true-->
+							<!--}-->
+					<!--});-->
+			<!--}-->
 	
-	    function destroyScroll() {
-	        $("#policy-text").mCustomScrollbar("destroy");
-	    }
+			<!--function destroyScroll() {-->
+					<!--$("#policy-text").mCustomScrollbar("destroy");-->
+			<!--}-->
 	
-	    function updateScroll() {
-	        destroyScroll();
-	        enableScroll();
-	    }
+			<!--function updateScroll() {-->
+					<!--destroyScroll();-->
+					<!--enableScroll();-->
+			<!--}-->
 	
-	</script>
-
+	<!--</script>-->
   </body>
 </html>
