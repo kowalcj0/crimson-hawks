@@ -242,41 +242,32 @@ var getDetails = function(elements, elementId) {
 !function ($) {
   $(function(){
 
+    $("div[id*='HD']").tooltip({
+        items: "[id]",
+        content: function() {
+            var element = $( this );
+            return getDetails("hotdesks", element.context.id);
+        },
+        show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+    }); // end of hotdesks
 
-    $("div[id*='EVSP']").click(function() {
-        $(this).tooltip({
-            items: "[id]",
-            content: function() {
-                var element = $( this );
-                return getDetails("currentEvents", element.context.id);
-            },
-            show: { effect: function() { $(this).fadeTo(3000, 0.9);}, length:0},
-        });
-        $(this).tooltip("open");
-    });
+    $("div[id*='EVSP']").tooltip({
+        items: "[id]",
+        content: function() {
+            var element = $( this );
+            return getDetails("currentEvents", element.context.id);
+        },
+        show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+    }); // end of EV desks
 
-    $("div[id*='HD']").click(function() {
-        $(this).tooltip({
-            items: "[id]",
-            content: function() {
-                var element = $( this );
-                return getDetails("hotdesks", element.context.id);
-            },
-            show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
-        });
-        $(this).tooltip("open");
-    });
+    $("div[id*='ED']").tooltip({
+        items: "[id]",
+        content: function() {
+            var element = $( this );
+            return getDetails("empdesks", element.context.id);
+        },
+        show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+    }); // end of ED desks
 
-    $("div[id*='ED']").click(function() {
-        $(this).tooltip({
-            items: "[id]",
-            content: function() {
-                var element = $( this );
-                return getDetails("empdesks", element.context.id);
-            },
-            show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
-        });
-        $(this).tooltip("open");
-    });
   });
 }(window.jQuery);
