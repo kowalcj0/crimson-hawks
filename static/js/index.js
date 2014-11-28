@@ -32,7 +32,11 @@
   };
 
   toggleCookieMonster =  function() {
-    $('div#cookieMonster').toggleClass('hide', !isFoodAvail);
+    if (isFoodAvail) {
+      $('img#cookieMonster').attr('src', '/media/cookie.gif');
+    } else {
+      $('img#cookieMonster').attr('src', '/media/no-food.png');
+    }
   };
 
   $(document).ready(function() {
