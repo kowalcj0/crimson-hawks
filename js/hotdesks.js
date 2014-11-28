@@ -65,6 +65,27 @@ var empdesks = [
 ]
 
 
+var eventspaces = [
+["EVSP01","Fostering IoT entreeurship workshop","28/11/2014 09:00","28/11/2014 14:00","http://www.digitalcatapultcentre.org.uk/event/fostering-iot-entrepreneurship/",""],
+["EVSP02","Digital TV Group Global TV Innovation Detonator","01/12/2014 09:00","01/12/2014 12:30","http://www.digitalcatapultcentre.org.uk/event/dtg-global-tv-innovation-detonator/",""],
+["EVSP03","Catapult Programme SME Event","02/12/2014 17:00","02/12/2014 21:30","http://www.digitalcatapultcentre.org.uk/event/cross-catapult-sme-event/",""],
+["EVSP04","101 Digital Breakfast: A new blueprint for Copyright Licensing","03/12/2014 09:00","03/12/2014 10:30","http://www.digitalcatapultcentre.org.uk/event/101-digital-breakfast-future-of-copyright-licensing/","Dr. Dinusha Mendis, Bournemouth University|Dr. Davide Secchi, Bournemouth University"],
+["EVSP05","Copyright Sandpit: Interactive SME  workshop","03/12/2014 11:00","03/12/2014 14:00","http://www.digitalcatapultcentre.org.uk/event/understanding-uk-copyright-law-an-interactive-workshop-for-photographers-and-illustrators/ ","Prof. Ronan Deazley, Professor of Copyright Law - University of Glasgow. Editor, Copyright User Portal|Bartolomeo Meletti, Lead Producer - Copyright User Portal|Dr. Dinusha Mendis, Co Director of CIPPM - Bournemouth University. Lead Academic, Copyright User Portal|Dominic Young, CEO - The Copyright Hub"],
+["EVSP06","IBM Hackathon","03/12/2014 10:00","04/12/2014 00:00","http://www.digitalcatapultcentre.org.uk/event/digital-health-hack-day/ ",""],
+["EVSP07","Content, Customers & Communities in the Media Landscape","04/12/2014 09:30","04/12/2014 16:30","http://www.digitalcatapultcentre.org.uk/event/content-customers-and-communities/ ","Ruben Kostucki, Growth Director - Makers Academy|James Woudhuysen, Futurologist|Lisa Mandell, Co-Founder - QuillContent|Kerensa Jennings, Head of Strategic Delivery - BBC"],
+["EVSP10","CREATe Public Domain Workshop for Creative Businesses","05/12/2014 09:00","05/12/2014 14:00","http://www.digitalcatapultcentre.org.uk/event/create-public-domain-workshop-for-creative-businesses-2/ ",""],
+["EVSP07","Gaming Intelligence Through Data","08/12/2014 09:00","08/12/2014 16:00","http://www.digitalcatapultcentre.org.uk/event/gaming-intelligence-through-data/ ","Nicholas Lovell, Director - GAMESbrief"],
+["EVSP10","D5 Summit","10/12/2014 09:00","10/12/2014 14:00","",""],
+["EVSP07","Digital Health Pitstop","08/12/2014 09:00","12/12/2014 17:30","http://www.digitalcatapultcentre.org.uk/event/healthpitstop/ ",""],
+["EVSP02","Catch Me If You Can: Business Opportunities in Cyber Security","15/12/2014 09:00","15/12/2014 13:00","http://www.digitalcatapultcentre.org.uk/event/catch-me-if-you-can-business-opportunities-in-cyber-security/ ","Sam Keayes, VP Consulting & Cyber Security Services (CIC) - Quintec a Thales Business|Rob Price, Head of Digital UK&I - Atos Consulting|Mark Brown, Executive Director Cyber Security & Resilience - EY"],
+["EVSP10","Data is the New Money: Opportunities in Big Data, Now and in the Future","15/12/2014 13:00","15/12/2014 17:00","http://www.digitalcatapultcentre.org.uk/event/data-is-the-new-money-opportunities-in-big-data-now-and-in-the-future/ ","Carlo Gagliardi, Partner & Co-Lead - Digital Practice|Shahbaz Haque, Director - Hitachi Consulting|John Levell, Associate Partner and UK&I Head of Digital - EY"],
+["EVSP03","Reinventing the High Street","16/12/2014 09:30","16/12/2014 17:30","http://www.digitalcatapultcentre.org.uk/event/reinventing-the-high-street-conference/ ","Ben Brown, Founder - Shopwave|Jonathan Duffy, Managing Director - beacontent|Michelle Lowe FAcSS, University of Southampton"],
+["EVSP05","UK Digital Summit for Policy & Business","17/12/2014 09:00","17/12/2014 17:00","http://www.digitalcatapultcentre.org.uk/event/uk-digital-summit/ ","Mary Kyriakidi, VP Insight for Branded Services and Content – BBC Worldwide|Paul Spence, Director of Strategy and Corporate Affairs – EDF Energy|Paul Gainham, Senior Director of Vertical Marketing EMEA – Juniper Networks|"],
+["EVSP01","IBM Hackathon","17/12/2014 10:00","17/12/2014 00:00","",""],
+["EVSP09","When Data Becomes Knowledge: Catapult Staff Conference","18/12/2014 11:00","18/12/2014 16:00","",""],
+["EVSP02","101 Launch Season Closing Party","18/12/2014 18:00","18/12/2014 22:00","",""]
+]
+
 String.format = function() {
     // The string containing the format items (e.g. "{0}")
     // will and always has to be the first argument.
@@ -101,8 +122,9 @@ var getDeskDetails = function(desks, deskId) {
 
    var HDcols = ["Desk","Name","Organistation","Email","Phone","Time in","Time Out"];
    var EDcols = ["Desk","Name","Role","Email","Phone"];
-   var output = "<table id='deskDetails' class='deskDetails'>";
+   var EVcols = ["Event Space","Name","Start","Finish","Link","Speakers"]
 
+   var output = "<table id='deskDetails' class='deskDetails'>";
    var cellTemplate = "<tr id='{0}Cell' class='tooltipCell'>"+
                            "<td colspan=2 id='{1}Field' class='tooltipField'>{2}</td>"+
                            "<td id='{3}Value' class='tooltipValue'>{4}</td>"+
@@ -111,6 +133,7 @@ var getDeskDetails = function(desks, deskId) {
    var cols = null;
    if (desks[0].length == HDcols.length) { cols = HDcols; console.log("HDcols"); }
    if (desks[0].length == EDcols.length) { cols = EDcols; console.log("EDcols"); }
+   if (desks[0].length == EVcols.length) { cols = EVcols; console.log("EVcols"); }
    for (col in cols) {
         c = String.format(cellTemplate,
                           cols[col].replace(" ",""), 
@@ -127,6 +150,19 @@ var getDeskDetails = function(desks, deskId) {
 
 !function ($) {
   $(function(){
+
+    $("div[id*='EVSP']").click(function() {
+        $(this).tooltip({
+            items: "[id]",
+            content: function() {
+                var element = $( this );
+                return getDeskDetails(eventspaces, element.context.id);
+            },
+            //show: "slideDown", // show immediately
+            show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
+        });
+        $(this).tooltip("open");
+    });
 
     $("div[id*='HD']").click(function() {
         $(this).tooltip({
