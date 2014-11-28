@@ -9,6 +9,8 @@ import tornado
 import tornadoredis
 
 tornado.log.enable_pretty_logging()
+pub_client = tornadoredis.Client()
+pub_client.connect()
 
 
 class WebSocket(tornado.websocket.WebSocketHandler):
@@ -51,11 +53,56 @@ class StaticFileHandler(tornado.web.StaticFileHandler):
             'no-store, no-cache, must-revalidate, max-age=0')
 
 
-def ws_publisher(channel, client):
+class MessageHandler(tornado.web.RequestHandler):
+
+    def initialize(self, channel):
+        self.channel = channel
+
+    def post(self):
+        message = self.get_argument('message')
+        print('publish to channel "{}" message "{}"'.format(
+            message, self.channel))
+        pub_client.publish(self.channel, message)
+
+
+class KitchenHandler(tornado.web.RequestHandler):
+
+    def initialize(self, channel):
+        self.channel = channel
+
+    @tornado.gen.coroutine
+    def post(self):
+        message = self.get_argument('message')
+        prev_state = yield tornado.gen.Task(
+            pub_client.get, 'food_avail')
+        new_state = message == 'food available'
+        if prev_state != new_state:
+            print('publish to channel "{}" message "{}"'.format(
+                message, self.channel))
+            pub_client.publish(self.channel, message)
+            yield tornado.gen.Task(
+                pub_client.set, 'food_avail', new_state)
+        self.finish(tornado.escape.json_encode(
+            {'isFoodAvail': new_state}))
+
+    @tornado.gen.coroutine
+    def find_state(self):
+        food_avail = yield tornado.gen.Task(
+            pub_client.get, 'food_avail')
+        raise tornado.gen.Return(food_avail in ('True', True))
+
+    @tornado.gen.coroutine
+    def get(self):
+        food_avail = yield self.find_state()
+        self.finish(tornado.escape.json_encode(
+            {'isFoodAvail': food_avail}))
+
+
+def ws_publisher(channel):
     while True:
         try:
             item = (yield)
-            client.publish(channel, tornado.escape.json_encode(item))
+            pub_client.publish(channel, tornado.escape.json_encode(item))
         except Exception:
             print traceback.format_exc()
 
@@ -64,8 +111,10 @@ def make_application():
     static_dir = os.path.join(os.path.dirname(__file__), 'static')
     handlers = [
         (r'/', tornado.web.RedirectHandler, {'url': '/index.html'}),
-        (r"/kitchen", WebSocket, {'channel': 'kitchen'}),
-        (r"/tweets", WebSocket, {'channel': 'tweets'}),
+        (r"/ws-kitchen", WebSocket, {'channel': 'kitchen'}),
+        (r"/msg-kitchen", KitchenHandler, {'channel': 'kitchen'}),
+        (r"/ws-tweets", WebSocket, {'channel': 'tweets'}),
+        (r"/msg-tweets", MessageHandler, {'channel': 'tweets'}),
         (r"/(.*)", StaticFileHandler, {'path': static_dir}),
     ]
     application = tornado.web.Application(handlers)

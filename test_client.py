@@ -1,15 +1,9 @@
 # -*- coding: utf-8 -*-
-import tornadoredis
-
-from app import ws_publisher
+from app import pub_client
 
 
 def main():
-    redis_client = tornadoredis.Client()
-    redis_client.connect()
-    kitchen = ws_publisher('kitchen', redis_client)
-    kitchen.next()
-    kitchen.send('kitchen')
+    pub_client.publish('kitchen', 'food available')
 
 
 if __name__ == '__main__':
