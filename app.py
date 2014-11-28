@@ -9,6 +9,8 @@ import traceback
 import tornado
 import tornadoredis
 
+static_dir = os.path.join(os.path.dirname(__file__), 'static')
+
 tornado.log.enable_pretty_logging()
 pub_client = tornadoredis.Client()
 pub_client.connect()
@@ -47,11 +49,25 @@ class WebSocket(tornado.websocket.WebSocketHandler):
 
 
 class StaticFileHandler(tornado.web.StaticFileHandler):
+
     def set_extra_headers(self, path):
         # Disable cache
         self.set_header(
             'Cache-Control',
             'no-store, no-cache, must-revalidate, max-age=0')
+
+
+class HTMLHandler(StaticFileHandler):
+
+    def initialize(self, filename):
+        if not filename.endswith('html'):
+            filename += '.html'
+        self.filename = filename
+        super(HTMLHandler, self).initialize(static_dir)
+
+    def get(self, path=None, include_body=True):
+        # Ignore 'path'.
+        super(HTMLHandler, self).get(self.filename, include_body)
 
 
 class MessageHandler(tornado.web.RequestHandler):
@@ -109,9 +125,9 @@ def ws_publisher(channel):
 
 
 def make_application():
-    static_dir = os.path.join(os.path.dirname(__file__), 'static')
     handlers = [
-        (r'/', tornado.web.RedirectHandler, {'url': '/index.html'}),
+        (r'/', HTMLHandler, {'filename': 'index'}),
+        (r'/kitchen', HTMLHandler, {'filename': 'kitchen'}),
         (r"/ws-kitchen", WebSocket, {'channel': 'kitchen'}),
         (r"/msg-kitchen", KitchenHandler, {'channel': 'kitchen'}),
         (r"/ws-tweets", WebSocket, {'channel': 'tweets'}),
