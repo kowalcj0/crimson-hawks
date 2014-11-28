@@ -127,6 +127,7 @@ def ws_publisher(channel):
 def make_application():
     handlers = [
         (r'/', HTMLHandler, {'filename': 'index'}),
+        (r'/k', HTMLHandler, {'filename': 'kitchen'}),
         (r'/kitchen', HTMLHandler, {'filename': 'kitchen'}),
         (r"/ws-kitchen", WebSocket, {'channel': 'kitchen'}),
         (r"/msg-kitchen", KitchenHandler, {'channel': 'kitchen'}),
