@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import tornado.websocket
 import tornado.web
+import tornado.options
 import os
 import logging
 import traceback
@@ -122,7 +123,10 @@ def make_application():
 
 
 def main():
-    port = 8000
+    tornado.options.define('port', default=8000)
+    tornado.options.parse_command_line()
+
+    port = tornado.options.options.port
     application = make_application()
     application.listen(port)
     ioloop = tornado.ioloop.IOLoop.instance()
