@@ -38,7 +38,7 @@
 		width: 100%;
 		background-color: #FF3C7D;
 		text-align: center;
-		font-family: 'VAGRoundedStd-Thin';
+		font-family: VAGRoundedStd-Thin, Helvetica, Arial, sans-serif;
 		font-size: 28px;
 		color: #ffffff;
 		margin-right: -60px;
@@ -167,7 +167,7 @@
 	}
 	#column-top-1 {
 		width: 400px;
-		height: 300px;
+		height: 200px;
 		color: #ffffff;	
 		margin-right: 20px;
 		background-color: rgba(51, 51, 51, 0.65);
