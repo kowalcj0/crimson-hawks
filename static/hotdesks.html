@@ -1,0 +1,146 @@
+<html>
+<link rel="stylesheet"
+<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script type="text/javascript" src="js/hotdesks.js"></script>
+  <style>
+  .ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+  }
+  .ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border-color: gray;
+    font: 12px "Helvetica Neue", Sans-Serif;
+    box-shadow: 0 0 7px black;
+  }
+  .arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+  }
+  .arrow.top {
+    top: -16px;
+    bottom: auto;
+  }
+  .arrow.left {
+    left: 20%;
+  }
+  .arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .arrow.top:after {
+    bottom: -20px;
+    top: auto;
+  }
+  #deskDetails {
+    color: white; 
+    font: 12px "Helvetica Neue", Sans-Serif;
+  }
+  </style>
+<body>
+
+<div id="EVENTSPACES">
+    <div id="EVSP01">EVSP01</div>
+    <div id="EVSP02">EVSP02</div>
+    <div id="EVSP03">EVSP03</div>
+    <div id="EVSP04">EVSP04</div>
+    <div id="EVSP05">EVSP05</div>
+    <div id="EVSP06">EVSP06</div>
+    <div id="EVSP07">EVSP07</div>
+    <div id="EVSP10">EVSP10</div>
+</div>
+
+<div id="hotdesks">
+    <div id="HDA1">HDA1</div>
+    <div id="HDA2">HDA2</div>
+    <div id="HDA3">HDA3</div>
+    <div id="HDA4">HDA4</div>
+    <div id="HDB1">HDB1</div>
+    <div id="HDB2">HDB2</div>
+    <div id="HDB3">HDB3</div>
+    <div id="HDB4">HDB4</div>
+    <div id="HDC1">HDC1</div>
+    <div id="HDC2">HDC2</div>
+    <div id="HDC3">HDC3</div>
+    <div id="HDC4">HDC4</div>
+    <div id="HDD1">HDD1</div>
+    <div id="HDD2">HDD2</div>
+    <div id="HDD3">HDD3</div>
+    <div id="HDD4">HDD4</div>
+    <div id="HDE1">HDE1</div>
+    <div id="HDE2">HDE2</div>
+    <div id="HDE3">HDE3</div>
+    <div id="HDE4">HDE4</div>
+    <div id="HDF1">HDF1</div>
+    <div id="HDF2">HDF2</div>
+    <div id="HDF3">HDF3</div>
+    <div id="HDF4">HDF4</div>
+    <div id="HDG1">HDG1</div>
+    <div id="HDG2">HDG2</div>
+    <div id="HDG3">HDG3</div>
+    <div id="HDG4">HDG4</div>
+    <div id="HDH1">HDH1</div>
+    <div id="HDH2">HDH2</div>
+    <div id="HDH3">HDH3</div>
+    <div id="HDH4">HDH4</div>
+</div>
+
+<div id="EMPDESKS">
+    <div id="ED01">ED01</div>
+    <div id="ED02">ED02</div>
+    <div id="ED03">ED03</div>
+    <div id="ED04">ED04</div>
+    <div id="ED05">ED05</div>
+    <div id="ED06">ED06</div>
+    <div id="ED07">ED07</div>
+    <div id="ED10">ED10</div>
+    <div id="ED11">ED11</div>
+    <div id="ED12">ED12</div>
+    <div id="ED13">ED13</div>
+    <div id="ED14">ED14</div>
+    <div id="ED15">ED15</div>
+    <div id="ED16">ED16</div>
+    <div id="ED17">ED17</div>
+    <div id="ED20">ED20</div>
+    <div id="ED21">ED21</div>
+    <div id="ED22">ED22</div>
+    <div id="ED23">ED23</div>
+    <div id="ED24">ED24</div>
+    <div id="ED25">ED25</div>
+    <div id="ED26">ED26</div>
+    <div id="ED27">ED27</div>
+    <div id="ED30">ED30</div>
+    <div id="ED31">ED31</div>
+    <div id="ED32">ED32</div>
+    <div id="ED33">ED33</div>
+    <div id="ED34">ED34</div>
+    <div id="ED35">ED35</div>
+    <div id="ED36">ED36</div>
+    <div id="ED37">ED37</div>
+    <div id="ED40">ED40</div>
+</div>
+<script>
+$(document).ready(function(){
+  //$("#HDA4").hover(function(){ $(this).text("asdas"); });
+  //$("#HDA4").tooltip();
+});
+</script>
+</body>
+</html>
