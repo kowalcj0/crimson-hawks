@@ -106,19 +106,19 @@ String.capitalize = function() {
 }
 
 
-var getDesk = function(desks, deskId) {
-    var desk = ["N/A","N/A","N/A","N/A","N/A","N/A","N/A"];
-    for (d in desks) {
-        if (desks[d][0] == deskId) {
-            desk = desks[d];
+var getElementData = function(elements, elementId) {
+    var result = ["N/A","N/A","N/A","N/A","N/A","N/A","N/A"];
+    for (e in elements) {
+        if (elements[e][0] == elementId) {
+            result = elements[e];
         };
     };
-    return desk;
+    return result;
 }
 
 
-var getDeskDetails = function(desks, deskId) {
-   var desk = getDesk(desks, deskId); 
+var getDetails = function(elements, elementId) {
+   var desk = getElementData(elements, elementId); 
 
    var HDcols = ["Desk","Name","Organistation","Email","Phone","Time in","Time Out"];
    var EDcols = ["Desk","Name","Role","Email","Phone"];
@@ -131,9 +131,9 @@ var getDeskDetails = function(desks, deskId) {
                        "</tr>";
 
    var cols = null;
-   if (desks[0].length == HDcols.length) { cols = HDcols; console.log("HDcols"); }
-   if (desks[0].length == EDcols.length) { cols = EDcols; console.log("EDcols"); }
-   if (desks[0].length == EVcols.length) { cols = EVcols; console.log("EVcols"); }
+   if (elements[0].length == HDcols.length) { cols = HDcols; console.log("HDcols"); }
+   if (elements[0].length == EDcols.length) { cols = EDcols; console.log("EDcols"); }
+   if (elements[0].length == EVcols.length) { cols = EVcols; console.log("EVcols"); }
    for (col in cols) {
         c = String.format(cellTemplate,
                           cols[col].replace(" ",""), 
@@ -156,7 +156,7 @@ var getDeskDetails = function(desks, deskId) {
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDeskDetails(eventspaces, element.context.id);
+                return getDetails(eventspaces, element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
@@ -169,7 +169,7 @@ var getDeskDetails = function(desks, deskId) {
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDeskDetails(hotdesks, element.context.id);
+                return getDetails(hotdesks, element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
@@ -182,7 +182,7 @@ var getDeskDetails = function(desks, deskId) {
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDeskDetails(empdesks, element.context.id);
+                return getDetails(empdesks, element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
