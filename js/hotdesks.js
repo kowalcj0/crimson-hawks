@@ -118,7 +118,7 @@ var getElementData = function(elements, elementId) {
 
 
 var getDetails = function(elements, elementId) {
-   var desk = getElementData(elements, elementId); 
+   var element = getElementData(eval(elements), elementId); 
 
    var HDcols = ["Desk","Name","Organistation","Email","Phone","Time in","Time Out"];
    var EDcols = ["Desk","Name","Role","Email","Phone"];
@@ -131,16 +131,28 @@ var getDetails = function(elements, elementId) {
                        "</tr>";
 
    var cols = null;
-   if (elements[0].length == HDcols.length) { cols = HDcols; console.log("HDcols"); }
-   if (elements[0].length == EDcols.length) { cols = EDcols; console.log("EDcols"); }
-   if (elements[0].length == EVcols.length) { cols = EVcols; console.log("EVcols"); }
+   switch (elements) {
+       case "empdesks":
+           cols = EDcols;
+           console.log("EDCols");
+           break;
+       case "eventspaces":
+           cols = EVcols;
+           console.log("EVCols");
+           break;
+       case "hotdesks":
+           cols = HDcols;
+           console.log("HDCols");
+           break;
+   }
+
    for (col in cols) {
         c = String.format(cellTemplate,
                           cols[col].replace(" ",""), 
                           cols[col].replace(" ",""),
                           cols[col],
                           cols[col].replace(" ",""),
-                          desk[col])
+                          element[col])
         output += c;
    }
    output += "</table>";
@@ -156,7 +168,7 @@ var getDetails = function(elements, elementId) {
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDetails(eventspaces, element.context.id);
+                return getDetails("eventspaces", element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
@@ -169,7 +181,7 @@ var getDetails = function(elements, elementId) {
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDetails(hotdesks, element.context.id);
+                return getDetails("hotdesks", element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
@@ -182,7 +194,7 @@ var getDetails = function(elements, elementId) {
             items: "[id]",
             content: function() {
                 var element = $( this );
-                return getDetails(empdesks, element.context.id);
+                return getDetails("empdesks", element.context.id);
             },
             //show: "slideDown", // show immediately
             show: { effect: function() { $(this).fadeTo(300, 0.9);}, length:0},
